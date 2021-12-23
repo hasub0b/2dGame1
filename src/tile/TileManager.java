@@ -28,9 +28,8 @@ public class TileManager {
     }
 
     public void getTileImage() {
-        try {
 
-            // placeholder
+            // placeholder, 0-9 not used
             setup(0,"grass00", false);
             setup(1,"grass00", false);
             setup(2,"grass00", false);
@@ -57,7 +56,7 @@ public class TileManager {
             setup(22,"water10", true);
             setup(23,"water11", true);
             setup(24,"water12", true);
-            setup(25,"water13", true );
+            setup(25,"water13", true);
             setup(26,"road00", false);
             setup(27,"road01", false);
             setup(28,"road02", false);
@@ -75,27 +74,6 @@ public class TileManager {
             setup(40,"wall", true);
             setup(41,"tree", true);
 
-            tile[1] = new Tile();
-            tile[1].image = ImageIO.read(getClass().getResourceAsStream("/tiles/wall.png"));
-            tile[1].collision = true;
-
-            tile[2] = new Tile();
-            tile[2].image = ImageIO.read(getClass().getResourceAsStream("/tiles/water.png"));
-            tile[2].collision = true;
-
-            tile[3] = new Tile();
-            tile[3].image = ImageIO.read(getClass().getResourceAsStream("/tiles/earth.png"));
-
-            tile[4] = new Tile();
-            tile[4].image = ImageIO.read(getClass().getResourceAsStream("/tiles/tree.png"));
-            tile[4].collision = true;
-
-            tile[5] = new Tile();
-            tile[5].image = ImageIO.read(getClass().getResourceAsStream("/tiles/sand.png"));
-
-        } catch (IOException e){
-            e.printStackTrace();
-        }
     }
 
     public void setup(int index, String imagePath, boolean collision){
@@ -144,11 +122,6 @@ public class TileManager {
     }
 
     public void draw(Graphics2D g2){
-
-
-        //g2.drawImage(tile[0].image,0,0,gp.tileSize,gp.tileSize,null);
-        //g2.drawImage(tile[1].image,48,0,gp.tileSize,gp.tileSize,null);
-        //g2.drawImage(tile[2].image,96,0,gp.tileSize,gp.tileSize,null);
 
         int worldCol = 0;
         int worldRow = 0;

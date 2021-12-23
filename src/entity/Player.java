@@ -114,44 +114,10 @@ public class Player extends Entity {
     public void pickUpObject(int i){
 
         if(i != 999){
-            /*
-           String objectName = gp.obj[i].name;
-
-           switch (objectName){
-               case "Key":
-                   gp.playSE(1);
-                   hasKey++;
-                   gp.obj[i] = null;
-                   gp.ui.showMessage("Löysit avaimen!");
-                   break;
-               case "Door":
-                   if(hasKey > 0){
-                       gp.playSE(3);
-                       gp.obj[i] = null;
-                       hasKey--;
-                       gp.ui.showMessage("Avasit oven!");
-                   } else {
-                       gp.ui.showMessage("Tarvitset avaimen!");
-                   }
-                   break;
-               case "Boots":
-                   gp.playSE(2);
-                   speed += 2;
-                   gp.obj[i] = null;
-                   gp.ui.showMessage("Uudet lenkkarit!");
-                   break;
-               case "Chest":
-                    gp.ui.gameFinished = true;
-                    gp.stopMusic();
-                    gp.playSE(4);
-                    break;
-           }*/
         }
     }
 
     public void draw(Graphics2D g2){
-        // g2.setColor(Color.white);
-        // g2.fillRect(x,y,gp.tileSize,gp.tileSize);
 
         BufferedImage image = null;
 
